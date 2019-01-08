@@ -1,9 +1,5 @@
 import java.util.LinkedList;
-/**
- * Implements an unbalanced binary search tree.
- * Note that all "matching" is based on the compareTo method.
- * @author Mark Allen Weiss
- */
+
 public class BinarySearchTree<AnyType extends Comparable<? super AnyType>>
 {
 
@@ -216,17 +212,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>>
      */
     public boolean isEmpty( ) { return root == null; }
  
-    /**
-     * Internal method to compute height of a subtree.
-     * @param t the node that roots the subtree.
-     */
-    /*private int height( BinaryNode<AnyType> t )
-    {
-        if( t == null )
-            return -1;
-        else
-            return 1 + Math.max( height( t.left ), height( t.right ) );    
-    }*/
+    
     
     // Basic node stored in unbalanced binary search trees
     static class BinaryNode<AnyType>
@@ -249,17 +235,4 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>>
         BinaryNode<AnyType> right;  // Right child
     }
 
-        // Test program
-    /*public static void main( String [ ] args )
-    {
-        BinarySearchTree<Integer> t = new BinarySearchTree<>( );
-        final int NUMS = 4000;
-        final int GAP  =   37;
-
-        System.out.println( "Checking... (no more output means success)" );
-
-        for( int i = GAP; i != 0; i = ( i + GAP ) % NUMS )
-            t.insert( i );
-   
-    }*/
 }
